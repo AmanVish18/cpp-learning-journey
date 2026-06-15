@@ -8,10 +8,10 @@ cout << endl;
 cout << "age??" << endl;
 cin >>age;
 if(age<18){
-cout<<"you can't perticipate in party."<<endl;
+cout<<"you can't participate in party."<<endl;
 }
 else if(age==18){
-cout << "you can perticipate but with pass." << endl;
+cout << "you can participate but with pass." << endl;
 }
 else{
 cout << "now enjoy party." << endl;
