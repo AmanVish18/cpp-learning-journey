@@ -1,0 +1,1 @@
+Added typecasting, reference variables, constants and setw practice
