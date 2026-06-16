@@ -31,4 +31,3 @@ int y;
     
     return 0;
 }
-Added company salary calculator using classes and objects
