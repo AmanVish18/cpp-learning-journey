@@ -16,4 +16,3 @@ cout << "you can participate but with pass." << endl;
 else{
 cout << "now enjoy party." << endl;
 }
-Added if-else practice program
