@@ -54,4 +54,3 @@ cout << "f is: " <<f<< endl;
 cout << "g is: " <<g<< endl;
 return 0;
 }
-Added typecasting, reference variables, constants and setw practice
