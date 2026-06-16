@@ -44,4 +44,3 @@ int main() {
 
     return 0;
 }
-Added practice of static data members and static member functions in C++
