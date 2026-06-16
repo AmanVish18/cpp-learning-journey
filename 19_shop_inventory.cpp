@@ -49,4 +49,3 @@ int main() {
 
     return 0;
 }
-Created a shop inventory system using arrays and classes in C++
