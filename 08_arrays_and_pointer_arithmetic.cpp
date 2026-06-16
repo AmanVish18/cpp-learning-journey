@@ -30,4 +30,3 @@ cout << "Roshan🥇 and Roshanlal🥈 are our toppes :🏆" << endl;
  }
 return 0;
 }
-Added arrays and pointer arithmetic practice
