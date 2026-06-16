@@ -40,4 +40,3 @@ switch (op){
     
     return 0;
 }
-Added calculator project using switch case
