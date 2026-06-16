@@ -1,0 +1,133 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+class students {
+    int n = 0;
+    int ID[1000];
+    string name[1000];
+    float marks[1000];
+
+public:
+
+    void enterdata(void) {
+
+        int x;
+        cout << "How many student's data you want to feed? ";
+        cin >> x;
+
+        for(int i=n; i<n+x; i++) {
+
+            cout << "Enter id: ";
+            cin >> ID[i];
+
+            cout << "Name: ";
+            cin >> name[i];
+
+            cout << "Marks: ";
+            cin >> marks[i];
+        }
+
+        n = n + x;
+
+        cout << "____________________" << endl;
+        cout << endl;
+
+    }
+    void display(void) {
+        for(int i=0; i<n; i++) {
+
+            cout << "ID number: " <<ID[i]<< endl;
+            cout << "name: " <<name[i]<< endl;
+            cout << "marks: " <<marks[i]<< endl;
+        }
+    }
+    void  search(void) {
+
+        int sid;
+        cout << "enter the id : " << endl;
+        cin >> sid;
+        for(int i=0; i<n; i++)
+        {
+            if(sid == ID[i])
+            {
+                cout<<"ID: "<<ID[i]<<endl;
+                cout<<"Name: "<<name[i]<<endl;
+                cout<<"Marks: "<<marks[i]<<endl;
+                return ;
+            }
+
+        }
+
+        cout << "Invalid id!!!!!" << endl;
+
+    }
+    void deletestudent(void) {
+        int del;
+        cout << "enter id to delete:!!" << endl;
+        cin >> del;
+        for(int i=0; i<n; i++) {
+            if(del==ID[i]) {
+                for(int j=i; j<n-1; j++) {
+                    ID[j]=ID[j+1];
+                    name[j]=name[j+1];
+                    marks[j]=marks[j+1];
+                }
+
+
+                n--;
+                cout<<"Student deleted successfully\n"<<endl;
+                return ;
+            }
+        }
+        cout << "invalid id!!!!" << endl;
+    }
+};
+
+
+int main()
+{
+    students s;
+    int choice;
+
+    do
+    {
+        cout << "\n===== STUDENT MANAGEMENT =====\n";
+        cout << "1. Enter Data\n";
+        cout << "2. Display Data\n";
+        cout << "3. Search Student\n";
+        cout << "4. Delete student\n";
+        cout << "5. Exit\n";
+        cout << "Enter choice: ";
+        cin >> choice;
+
+        switch(choice)
+        {
+        case 1:
+            s.enterdata();
+            break;
+
+        case 2:
+            s.display();
+            break;
+
+        case 3:
+            s.search();
+            break;
+
+        case 4:
+            s.deletestudent();
+
+            break;
+        case 5:
+            cout << "exit...!!" << endl;
+            break;
+        default:
+            cout << "Invalid choice!";
+        }
+
+    } while(choice != 5);
+
+    return 0;
+}
+feat: add console based student management system
