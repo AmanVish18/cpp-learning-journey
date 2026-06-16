@@ -13,4 +13,3 @@ cin >>a;
       cout << "but for VIP : $" <<a<<", they will get return rate: " <<forsure(a,1.20)<<endl;
 return 0 ;
 }
-Added default arguments function practice
