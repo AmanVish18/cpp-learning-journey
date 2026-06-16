@@ -130,4 +130,3 @@ int main()
 
     return 0;
 }
-feat: add console based student management system
