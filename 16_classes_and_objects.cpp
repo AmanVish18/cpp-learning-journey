@@ -34,4 +34,3 @@ int x,y,z;
     
     return 0;
 }
-Added basic class and object practice with encapsulation
