@@ -45,4 +45,3 @@ do{
  }while(true);
 return 0;
 }
-Added loops practice with for, while and do-while
