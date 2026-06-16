@@ -22,4 +22,3 @@ break;
 }
 return 0 ;
 }
-Added switch case practice program
