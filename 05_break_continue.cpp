@@ -23,4 +23,3 @@ if(a==10){
     
     return 0;
 }
-Added break and continue statement practice
