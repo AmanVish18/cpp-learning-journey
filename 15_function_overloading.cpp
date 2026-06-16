@@ -22,4 +22,3 @@ int main()
     cout << "the area of circle is: "<<sum(7) << endl;
     return 0;
 }
-Added function overloading practice
