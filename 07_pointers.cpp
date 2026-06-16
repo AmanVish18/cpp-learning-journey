@@ -22,4 +22,3 @@ cout << "the valse at (adress of (y)) is: " <<**c<< endl;
   
     return 0;
 }
-Added pointers and pointer-to-pointer practice
