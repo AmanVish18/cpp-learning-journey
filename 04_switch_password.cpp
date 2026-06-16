@@ -18,4 +18,4 @@ switch(code)
     }
     return 0;
     }
-Added switch case password checker practice
+ 
