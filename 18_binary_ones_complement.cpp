@@ -51,4 +51,3 @@ int main()
     b.display(); 
     return 0;
 }
-Added binary validation and ones complement using OOP
