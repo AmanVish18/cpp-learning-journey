@@ -37,4 +37,3 @@ cout <<"your answer: "<<(ans+3)<< endl;
 }
 return 0 ;
 }
-Added inline modulus function with error handling
