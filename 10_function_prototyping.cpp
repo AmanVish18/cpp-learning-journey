@@ -36,4 +36,3 @@ void g(){
 
 cout << "suluuuluuuuuuu🫣" << endl; 
 }
-Added function prototyping and void function practice
