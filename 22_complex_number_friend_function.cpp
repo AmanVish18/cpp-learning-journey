@@ -6,7 +6,7 @@ public :
     friend complex sumdata(complex o1,complex o2);
     void setdata(void) {
         int n1,n2;
-        cout << "enter the value of:" << endl;
+        cout << "enter the value first number:" << endl;
         cin >>n1;
         cout << "enter the value of second one :" << endl;
         cin >> n2;
