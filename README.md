@@ -9,8 +9,7 @@ My progress while learning C++.
 - Functions
 - OOP
 - Arrays
-
--Friend Function in C++
+•Friend Function in C++
 
 ## Projects
 - Calculator
