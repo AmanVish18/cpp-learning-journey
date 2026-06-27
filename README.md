@@ -10,7 +10,16 @@ My progress while learning C++.
 - OOP
 - Arrays
 •Friend Function in C++
+- Strings
+- Classes & Objects
+- Static Members
+- Friend Class
+- Constructors
+- Constructor Overloading
 
 ## Projects
 - Calculator
 - Student Management System
+- Complex Number Calculator
+- Distance Between Two Points
+- Bank Deposit Calculator
