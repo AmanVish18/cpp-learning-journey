@@ -23,3 +23,11 @@ My progress while learning C++.
 - Complex Number Calculator
 - Distance Between Two Points
 - Bank Deposit Calculator
+
+# 🚀 C++ Learning Journey
+
+## 📚 Topics Covered
+
+## 💻 Projects
+
+## 🎯 Goals
