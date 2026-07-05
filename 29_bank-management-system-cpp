@@ -1,0 +1,336 @@
+#include<iostream>
+#include<string>
+using namespace std ;
+class bank {
+    string adminpss="@man143";
+    int n=0;
+    int currentuser=-1;
+    int pin[10000];
+    string sname[10000];
+    string fname[10000];
+    int A_number[10000];
+    float money[10000];
+public:
+//admin call
+    bool adminlogin();
+    void setdata(void);
+    void display (void);
+    void search(void);
+    void removedata(void);
+    //customer call
+    bool customerlogin();
+    void withdraw();
+    void deposit();
+    void balance();
+    void logout();
+
+};
+bool bank::adminlogin() {
+    string pss;
+    cout << "===KINDLY ENTER THE PASSWORD===" << endl;
+    cin >> pss;
+    if(pss==adminpss) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+void bank::setdata(void) {
+    int t;
+    cout << "How many accounts you want to feed?:" << endl;
+    cin >>t;
+    for(int i=n; i<n+t; i++) {
+        cout << " Enter the account holder's account number:" << endl;
+        cin>>A_number[i];
+        if(A_number[i]<=0) {
+            cout << "invalid account number!!" << endl;
+            i--;
+            continue;
+        }
+        bool found = false;
+
+        for(int j = 0; j < n; j++)
+        {
+            if(A_number[i] == A_number[j])
+            {
+                found = true;
+                break;
+            }
+        }
+
+        if(found)
+        {
+            cout << "Account Number Already Exists!" << endl;
+            i--;          // same account dubara input lo
+            continue;
+        }
+        cout << "Enter the first name of account holder:" << endl;
+        cin >> fname[i];
+        cout << "Enter the  surname of account holder:" << endl;
+        cin >> sname[i];
+        cout << "Enter ₹ amount in the account:" << endl;
+        cin >> money[i];
+        if(money[i]<=0) {
+            cout << "invalid amount !" << endl;
+            i--;
+            continue;
+        }
+        do
+        {
+            cout << "Account holder please set your 4-digit pin: ";
+            cin >> pin[i];
+        }
+        while(pin[i] < 1000 || pin[i] > 9999);
+        cout << "--------------------------" << endl;
+    }
+    n=n+t;
+}
+void bank::display(void) {
+    if(n==0)
+    {
+        cout<<"No Accounts Found!"<<endl;
+        return;
+    }
+    for(int i=0; i<n; i++) {
+        cout << "Account number: " <<A_number[i]<< endl;
+        cout << "Name: " <<fname[i]<<" "<<sname[i]<< endl;
+        cout << "Bank balance: ₹" <<money[i]<< endl;
+        cout << "--------------------------" << endl;
+    }
+}
+void bank :: search (void) {
+    if(n==0)
+    {
+        cout<<"No Accounts Found!"<<endl;
+        return;
+    }
+    int AN;
+    cout << "Enter account number:" << endl;
+    cin>>AN;
+    for(int i =0; i<n; i++) {
+        if(AN==A_number[i]) {
+
+            cout << "Account number: " <<A_number[i]<< endl;
+            cout << "name: " <<fname[i]<<" "<<sname[i]<< endl;
+            cout << "Bank balance: ₹" <<money[i]<< endl;
+            return ;
+        }
+    }
+    cout << "Invalid account!!!!" << endl;
+}
+
+void bank:: removedata(void) {
+    if(n==0)
+    {
+        cout<<"No Accounts Found!"<<endl;
+        return;
+    }
+    int del;
+    cout << "Enter account number to delete data:" << endl;
+    cin >> del;
+    for(int i=0; i<n; i++) {
+        if(del==A_number[i]) {
+            for(int j=i; j<n-1; j++) {
+                A_number[j]=A_number[j+1];
+                fname[j]=fname[j+1];
+                sname[j]=sname[j+1];
+                money[j]=money[j+1];
+                pin[j]=pin[j+1];
+            }
+            n--;
+            cout << "Account deleted successfully!!" << endl;
+            return ;
+        }
+    }
+    cout << "invalid account!!!" << endl;
+}
+bool bank::customerlogin() {
+    if(n==0)
+    {
+        cout<<"No Accounts Found!"<<endl;
+        return false;
+    }
+    int Ac;
+    cout << "Enter your account number:" << endl;
+    cin >> Ac;
+    for(int i=0; i<n; i++) {
+        if(Ac==A_number[i]) {
+            int p1;
+            cout << "Enter security pin:" << endl;
+            cin>>p1;
+            if(p1==pin[i]) {
+                currentuser=i;
+                return true;
+            }
+            else {
+                cout << "wrong pin!!" << endl;
+                return false;
+            }
+        }
+    }
+    cout << "invalid account number!!!" << endl;
+    return false;
+}
+void bank::balance()
+{
+    cout << "====================" << endl;
+    cout << "Account Number: " << A_number[currentuser] << endl;
+    cout << "Name: " << fname[currentuser] << " " << sname[currentuser] << endl;
+    cout << "Balance: ₹" << money[currentuser] << endl;
+    cout << "====================" << endl;
+}
+void bank::withdraw()
+{
+
+    float wd;
+    cout << "Enter amount:" << endl;
+    cin >> wd;
+    if(wd <= 0)
+    {
+        cout << "Invalid Amount!" << endl;
+        return;
+    }
+    else {
+
+        if(wd<=money[currentuser])
+        {
+            money[currentuser]-=wd;
+            cout<<"Withdraw Successful"<<endl;
+            cout<<"Current Balance: ₹"<<money[currentuser]<<endl;
+        }
+        else
+        {
+            cout<<"Insufficient Balance"<<endl;
+        }
+    }
+}
+void bank::deposit()
+{
+    float dp;
+    cout << "Enter amount:" << endl;
+    cin >> dp;
+    if(dp<= 0)
+    {
+        cout << "Invalid Amount!" << endl;
+        return;
+    }
+    else {
+
+
+        money[currentuser]+=dp;
+
+        cout<<"Deposit Successful"<<endl;
+        cout<<"Current Balance: ₹"<<money[currentuser]<<endl;
+    }
+}
+void bank::logout() {
+    currentuser=-1;
+    cout << "logout successfully!!!" << endl;
+    return ;
+}
+int main() {
+    bank s;
+    int c1;
+    do {
+        cout << "←===LOGIN===→" << endl;
+        cout << "1. Manager login." << endl;
+        cout << "2. Customer login." << endl;
+        cout << "3. Exit." << endl;
+        cin >> c1;
+        switch (c1)
+        {
+        case 1:
+            if(s.adminlogin()) {
+                int choice;
+
+                do
+                {
+                    cout << "\n===== BANK MANAGEMENT =====\n";
+                    cout << "1. Enter Data\n";
+                    cout << "2. Display Data\n";
+                    cout << "3. Search Account\n";
+                    cout << "4. Delete Account\n";
+                    cout << "5. Exit\n";
+                    cout << "Enter choice: ";
+                    cin >> choice;
+
+                    switch(choice)
+                    {
+                    case 1:
+                        s.setdata();
+                        break;
+
+                    case 2:
+                        s.display();
+                        break;
+
+                    case 3:
+                        s.search();
+                        break;
+
+                    case 4:
+                        s.removedata();
+
+                        break;
+                    case 5:
+                        cout << "exit...!!" << endl;
+                        break;
+                    default:
+                        cout << "Invalid choice!";
+                    }
+
+                } while(choice != 5);
+
+            }
+            else {
+                cout << "wrong password!!!" << endl;
+            }
+            break;
+        case 2:
+            if(s.customerlogin()) {
+                int op;
+                do {
+
+                    cout  << endl;
+                    cout << "===================" << endl;
+                    cout << "1. Check balance:" << endl;
+                    cout << "2. withdraw" << endl;
+                    cout << "3. deposit" << endl;
+                    cout << "4. logout" << endl;
+                    cin >> op;
+                    switch (op) {
+                    case 1:
+                        s.balance();
+                        break ;
+                    case 2:
+                        s.withdraw();
+
+                        break;
+                    case 3:
+
+
+                        s.deposit();
+
+                        break ;
+                    case 4:
+
+                        s.logout();
+                        break;
+                    default :
+                        cout << "invalid choice!!!" << endl;
+                    }
+                } while(op!=4);
+            }
+
+            break;
+        case 3:
+            cout << "Exit..!!!" << endl;
+            break;
+        default :
+            cout << "Invalid choice!!!" << endl;
+        }
+    } while(c1 !=3);
+
+    return 0;
+}
