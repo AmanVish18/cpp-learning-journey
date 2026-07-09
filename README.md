@@ -22,13 +22,11 @@ My progress while learning C++.
 - Multiple Inheritance
 
 ## Projects
-- Calculator
 - Student Management System
 - Bank Management System
 - Complex Number Calculator
 - Distance Between Two Points
 - Bank Deposit Calculator
-- Calculator
 - Hybrid Calculator
 
 # 🚀 C++ Learning Journey
