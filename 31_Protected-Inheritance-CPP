@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std ;
+//example of protected interitnce in class!!
+class base {
+protected :
+    int a ;
+private :
+
+};
+
+/*
+Table:
+                   private derivation    public derivation    protected derivation
+1.private members :   not interited         not interited         not interited
+2.public members :    private               public                protected
+3.protected members : private               protected             protected
+
+*/
+class derived: protected base {
+public :
+    void setdata() {
+        a=5;
+
+    }
+    void display () {
+        cout << "value of a is: "<<a<< endl;
+    }
+};
+int main() {
+    derived D1;
+    D1.setdata();
+    D1.display();
+    return 0;
+}
