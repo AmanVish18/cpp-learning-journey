@@ -29,6 +29,7 @@ My progress while learning C++.
 - Distance Between Two Points
 - Bank Deposit Calculator
 - Calculator
+- Hybrid Calculator
 
 # 🚀 C++ Learning Journey
 
