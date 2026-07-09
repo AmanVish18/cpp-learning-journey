@@ -1,0 +1,138 @@
+#include<iostream>
+#include<string>
+using namespace std;
+/*
+Create 2 classes:
+    1. SimpleCalculator - Takes input of 2 numbers using a utility function and performs +, -, *, / and displays the results using another function.
+    2. ScientificCalculator
+     */ //for scientific calculator:
+#include<cmath>
+/*
+    Create another class HybridCalculator and inherit it using these 2 classes:
+    Q1. What type of Inheritance are you using?
+    Q2. Which mode of Inheritance are you using?
+    Q3. Create an object of HybridCalculator and display results of the simple and scientific calculator.
+    Q4. How is code reusability implemented?
+*/
+class ScientificCalculator {
+protected :
+    float b;
+public :
+    void Scientific() {
+        cout << "welcome!!🫀" << endl;
+        int op;
+        do {
+
+            cout << "1.√" << endl;
+            cout << "2.sin" << endl;
+            cout << "3.cos" << endl;
+            cout << "4.tan" << endl;
+            cout << "5.exit.." << endl;
+            cin >> op;
+            if(op==5)
+                break;
+            cin >>b;
+            switch(op) {
+            case 1:
+                cout <<"result: "<<sqrt(b)<< endl;
+                break ;
+            case 2:
+                cout << "result: " <<sin(b)<< endl;
+                break;
+            case 3:
+                cout << "result: "<<cos(b) << endl;
+                break;
+            case 4:
+
+                cout << "result: " <<tan(b)<< endl;
+                break;
+            default:
+                cout << "invalid operator" << endl;
+
+            }
+        } while(op!=5);
+    }
+};
+class SimpleCalculator {
+protected :
+    float a;
+    float b;
+public :
+    void simple() {
+        cout << "welcome!!🫀" << endl;
+        int c1;
+
+        do {
+            cout << "1.calculate" << endl;
+            cout << "2.exit"<< endl;
+            cin >>c1;
+            switch(c1) {
+            case 1:
+                cin >> a;
+                char op;
+                cin >> op;
+                cin >>b;
+                switch(op) {
+                case('+'):
+                    cout <<"result: "<<a+b<< endl;
+                    break ;
+                case('-'):
+                    cout << "result: " <<a-b<< endl;
+                    break;
+                case('*'):
+                    cout << "result: "<<a*b << endl;
+                    break;
+                case('/'):
+                    if(b!=0) {
+                        cout << "result: " <<a/b<< endl;
+                    }
+                    else {
+                        cout << "undefined  ♾️" << endl;
+                    }
+                    break;
+                default:
+                    cout << "invalid operator" << endl;
+
+                }
+                break;
+            case 2:
+                cout << "exit" << endl;
+                break;
+            default:
+                cout << " invalid choice" << endl;
+            }
+        } while(c1!=2);
+    }
+};
+class HybridCalculator: public SimpleCalculator,public ScientificCalculator
+{
+public:
+    void hybrid() {
+        cout << "=====WELCOME=====" << endl;
+        int s1;
+        do {
+            cout << "1.Simple calculator" << endl;
+            cout << "2.Scientific Calculator" << endl;
+            cout << "3.Exit." << endl;
+            cin>>s1;
+            switch(s1) {
+            case 1:
+                simple();
+                break;
+            case 2:
+                Scientific();
+                break;
+            case 3:
+                cout << "exit...!!" << endl;
+                break;
+            default:
+                cout << "Invalid choice!!" << endl;
+            }
+        } while(s1!=3);
+    }
+};
+int main() {
+    HybridCalculator hy;
+    hy.hybrid();
+    return 0;
+}
