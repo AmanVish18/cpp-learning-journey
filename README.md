@@ -1,3 +1,4 @@
+i
 # cpp-learning-journey
 A collection of my coding practice, experiments, projects, and learning progress. Starting with C++ fundamentals and expanding into DSA, OOP, development, and software engineering throughout my B.Tech CSE journey.
 
@@ -16,13 +17,19 @@ My progress while learning C++.
 - Friend Class
 - Constructors
 - Constructor Overloading
+- Single Inheritance
+- Protected Inheritance
+- Multilevel Inheritance
+- Multiple Inheritance
 
 ## Projects
 - Calculator
 - Student Management System
+- Bank Management System
 - Complex Number Calculator
 - Distance Between Two Points
 - Bank Deposit Calculator
+- Calculator
 
 # 🚀 C++ Learning Journey
 
