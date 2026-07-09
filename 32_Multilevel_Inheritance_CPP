@@ -1,0 +1,56 @@
+#include<iostream>
+using namespace std ;
+//example of multi-level interitnce in class!!
+/*
+Table:
+                   private derivation    public derivation    protected derivation
+1.private members :   not interited         not interited         not interited
+2.public members :    private               public                protected
+3.protected members : private               protected             protected
+
+*/
+class students {
+protected :
+    int rollnum;
+public:
+    void set_num(int);
+    void get_num() {
+        cout << "Roll number: " <<rollnum<< endl;
+    }
+
+};
+void students::set_num(int s) {
+    rollnum=s;
+}
+class exam: public students {
+protected:
+    float maths, chemistry, physics ;
+public:
+    void set_marks(float,float,float);
+    void get_marks() {
+        cout << "Physics marks: " <<physics<< endl;
+        cout << "Chemistry marks: " <<chemistry<< endl;
+        cout << "Maths marks: " <<maths<< endl;
+    }
+};
+void exam:: set_marks(float m1,float m2,float m3) {
+    maths= m1;
+    physics = m2;
+    chemistry = m3;
+}
+class result: public exam {
+    float persentage ;
+public :
+    void display () {
+        get_num();
+        get_marks();
+        cout << "Result: " <<(physics+chemistry+maths)/3<<"%"<< endl;
+    }
+};
+int main() {
+    result r1;
+    r1.set_num(01);
+    r1.set_marks(95,98,96);
+    r1.display();
+    return 0;
+}
