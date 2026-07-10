@@ -20,6 +20,7 @@ My progress while learning C++.
 - Protected Inheritance
 - Multilevel Inheritance
 - Multiple Inheritance
+- Virtual Inheritance (Diamond Problem)
 
 ## Projects
 - Student Management System
