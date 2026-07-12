@@ -21,6 +21,7 @@ My progress while learning C++.
 - Multilevel Inheritance
 - Multiple Inheritance
 - Virtual Inheritance (Diamond Problem)
+- Constructor Calling in Inheritance
 
 ## Projects
 - Student Management System
