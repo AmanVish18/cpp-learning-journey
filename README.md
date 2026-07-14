@@ -1,19 +1,33 @@
-# cpp-learning-journey
-A collection of my coding practice, experiments, projects, and learning progress. Starting with C++ fundamentals and expanding into DSA, OOP, development, and software engineering throughout my B.Tech CSE journey.
+# 🚀 C++ Learning Journey
 
-My progress while learning C++.
+Welcome to my **C++ Learning Journey** repository!
 
-## Topics Covered
+This repository contains my C++ practice programs, mini projects, and notes as I learn C++ from basics to advanced Object-Oriented Programming (OOP). Every program is written by me to strengthen my problem-solving and programming skills.
+
+## 📌 About
+
+- 🌱 Learning C++ from scratch
+- 💻 Writing code daily and improving consistently
+- 🎯 Goal: Become a Software Engineer
+- 📂 Total Programs: **37+**
+- 🛠️ Mini Projects Included
+
+## 📚 Topics Covered
+
 - Basics
+- Variables & Data Types
+- Operators
+- Conditional Statements
 - Loops
 - Functions
-- OOP
 - Arrays
-- Friend Function in C++
 - Strings
+- Pointers
+- Dynamic Memory Allocation (`new` & `delete`)
 - Classes & Objects
-- Static Members
+- Friend Function
 - Friend Class
+- Static Members
 - Constructors
 - Constructor Overloading
 - Single Inheritance
@@ -22,19 +36,36 @@ My progress while learning C++.
 - Multiple Inheritance
 - Virtual Inheritance (Diamond Problem)
 - Constructor Calling in Inheritance
+- Array of Objects Using Pointers
 
-## Projects
-- Student Management System
-- Bank Management System
-- Complex Number Calculator
-- Distance Between Two Points
-- Bank Deposit Calculator
-- Hybrid Calculator
+## 🛠️ Mini Projects
 
-# 🚀 C++ Learning Journey
+- 🧮 Calculator
+- 🏦 Bank Management System
+- 🎓 Student Management System
+- 🔬 Hybrid Calculator
+- 💰 Bank Deposit Calculator
+- ➕ Complex Number Calculator
+- 📏 Distance Between Two Points
 
-## 📚 Topics Covered
+## 🎯 Current Progress
 
-## 💻 Projects
+- ✅ 37+ C++ Programs Completed
+- ✅ Strong OOP Fundamentals
+- 🔄 Currently Learning Advanced C++
 
-## 🎯 Goals
+## 📅 Future Topics
+
+- Polymorphism
+- Virtual Functions
+- Abstract Classes
+- File Handling
+- Templates (Generic Programming)
+- Exception Handling
+- STL (Vector, Stack, Queue, Map)
+
+## 🤝 Connect with Me
+
+GitHub: **AmanVish18**
+
+⭐ If you like this repository, don't forget to star it!
