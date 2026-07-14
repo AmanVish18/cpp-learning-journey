@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std ;
+int main() {
+//pointers
+    int a=90;
+    int* b=&a;
+    cout << "The address of a is: "<<b<< endl;
+    cout << "The value at adress of a is: "<<*b<< endl;
+//New operator
+//int* ptr= new int;
+//*ptr=20;
+//in arrays
+    cout << "how many value want to store: " << endl;
+    int n;
+    cin >> n;
+    int* ptr= new int[n];
+    cout << "Enter values" << endl;
+    for(int i=0; i<n; i++) {
+        cin >>ptr[i];
+    }
+    cout << "values are: " << endl;
+    for(int i=0; i<n; i++) {
+        cout << "value: " <<ptr[i]<< endl;
+    }
+//delete operator
+    delete[] ptr;
+    return 0;
+}
