@@ -37,7 +37,7 @@ This repository contains my C++ practice programs, mini projects, and notes as I
 - Virtual Inheritance (Diamond Problem)
 - Constructor Calling in Inheritance
 - Array of Objects Using Pointers
-
+- Virtual Function Runtime Polymorphism 
 ## 🛠️ Mini Projects
 
 - 🧮 Calculator
