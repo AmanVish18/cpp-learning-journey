@@ -51,7 +51,7 @@ This repository contains my C++ practice programs, mini projects, and notes as I
 
 ## 🎯 Current Progress
 
-- ✅ 37+ C++ Programs Completed
+- ✅ 40+ C++ Programs Completed
 - ✅ Strong OOP Fundamentals
 - 🔄 Currently Learning Advanced C++
 
