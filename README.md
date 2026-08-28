@@ -39,8 +39,8 @@ This repository contains my C++ practice programs, mini projects, and notes as I
 - Array of Objects Using Pointers
 - Virtual Function Runtime Polymorphism 
 - File Handling Read & Write
--Virtual Functions
--Templates
+- Virtual Functions
+- Templates
 
 ## 🛠️ Mini Projects
 
