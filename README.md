@@ -39,6 +39,9 @@ This repository contains my C++ practice programs, mini projects, and notes as I
 - Array of Objects Using Pointers
 - Virtual Function Runtime Polymorphism 
 - File Handling Read & Write
+-Virtual Functions
+-Templates
+
 ## 🛠️ Mini Projects
 
 - 🧮 Calculator
@@ -49,21 +52,25 @@ This repository contains my C++ practice programs, mini projects, and notes as I
 - ➕ Complex Number Calculator
 - 📏 Distance Between Two Points
 
+
 ## 🎯 Current Progress
 
 - ✅ 40+ C++ Programs Completed
 - ✅ Strong OOP Fundamentals
+- ✅ Inheritance & Polymorphism
+- ✅ Virtual Functions
+- ✅ File Handling
+- ✅ Templates
 - 🔄 Currently Learning Advanced C++
 
 ## 📅 Future Topics
 
-- Polymorphism
-- Virtual Functions
 - Abstract Classes
-- File Handling
-- Templates (Generic Programming)
 - Exception Handling
-- STL (Vector, Stack, Queue, Map)
+- STL
+- DSA
+- Recursion & Advanced Problem Solving
+- Competitive Programming
 
 ## 🤝 Connect with Me
 
